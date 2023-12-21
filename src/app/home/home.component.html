@@ -1,0 +1,193 @@
+<div class="container">
+    <div class="row ">
+      <section class="app" class="col-md-2">
+        <aside class="sidebar">
+               <header>
+              التصنيفات
+            </header>
+          <nav class="sidebar-nav">
+       
+            <ul>
+              <li *ngFor="let prod of FilterProduct">
+                <a (mouseover)="getProductcat(prod)" ><i class="ion-bag"></i> <span>{{prod}}</span></a>
+                <ul class="nav-flyout"  >
+                  <ng-container >
+                  <li *ngFor="let p of productcategory">
+                    <a routerLink="../subitem/{{p?.id}}"><i class="ion-ios-color-filter-outline"></i>{{p.productcat[1]}}</a>
+                  </li>
+                 </ng-container>
+                </ul>
+              </li>
+              
+            </ul>
+          </nav>
+        </aside>
+      </section>
+            <!-- Sidebar -->
+           <!--<div id="sidebar" class="col-md-2 ">
+             
+              <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
+               
+                  <li class="dropdown" *ngFor="let prod of FilterProduct ">
+                    <a href="#" class="nav-link  text-truncate" id="dropdown" aria-expanded="false" >
+                    {{prod}}
+                    </a>
+                  
+                </li>
+                
+               
+              </ul>
+            </div>-->
+
+            <!-- Content -->
+            <div id="content " class="col-md-10" >
+              
+                <div class="container-fluid">
+                  <ngx-slick-carousel class="carousel" 
+                  #slickModal="slick-carousel" 
+                  [config]="slideConfig2" 
+                  
+                >
+                  <div ngxSlickItem  class="slide " *ngFor="let p of   images " >
+                    
+                      <img src="{{p.img }}" alt="" width="100%">
+                   
+              
+                 
+              
+                  
+              </div>
+            </ngx-slick-carousel>
+                </div>
+             
+              
+            </div>
+          </div>
+      
+            
+            
+            
+       
+            
+           
+<div class="row">
+    <ng-container class="col-md-12 col-xs-12"   >
+      <div  (OnCreate)="getProductcat('COMPUTER')" class=" Electeical">
+      <div class="title"> اجهزة الكترونية   </div>
+      <ngx-slick-carousel class="carousel" 
+      #slickModal="slick-carousel" 
+      [config]="slideConfig" 
+      
+    >
+    
+    <div ngxSlickItem  class="slide publicproduct" *ngFor="let p of   (productcategories[0] ? productcategories[0].slice(0,20) :[] ) " >
+      <div class="publicproductdiv">
+        <img src="{{p.selectedFile[0].imageurl }}" alt="" width="100%" class="tool-image">
+        <div class="productcap">
+          <a routerLink="../itemdetails/{{p?.id}}" ><div>{{p.productname}}</div></a>
+          <span class="price">{{p.saleprice}} جنية </span>
+
+        </div>
+
+
+    </div>
+
+    
+</div>
+</ngx-slick-carousel>
+
+     <!-- <carousel *ngFor="let p of Product " style="direction:rtl">
+        <div class="Title">{{p.productcat[0]}} </div>
+        <div class="carousel-cell" *ngIf="p.selectedFile[0]">
+            <img [src]="p.selectedFile[0].imageurl"> 
+        </div>
+        <div class="carousel-cell">
+        </div>
+    </carousel>-->
+    </div>
+    </ng-container>
+
+</div>
+    <div class="row ">
+    <ng-container>
+      <div  (OnCreate)="getProductcat('أدوات مكتبية')" class=" Electeical">
+        <div class="title">أدوات مكتبية</div>
+        <div class="col-md-2 col-xs-6 mt-3" *ngFor="let p of   (productcategories[1] ? productcategories[1].slice(0,6) :[] ) ">
+          <div class="card" >
+            <img class="card-img-top tool-image" src="{{p.selectedFile[0].imageurl}}" alt="Card image cap">
+            <div class="card-body">
+              <a routerLink="../itemdetails/{{p?.id}}"><h5 class="card-title">{{p.productname}}</h5></a>
+              <p class="card-text prices">{{p.saleprice}} جنية </p>
+             
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      
+    </ng-container>
+  </div>
+<div class="row">
+  <ng-container class="col-md-12 col-xs-12"   >
+    <div  (OnCreate)="getProductcat('MOBILE')" class=" Electeical">
+    <div class="title">  موبايلات     </div>
+    <ngx-slick-carousel class="carousel" 
+    #slickModal="slick-carousel" 
+    [config]="slideConfig" 
+    
+  >
+  
+  <div ngxSlickItem  class="slide publicproduct" *ngFor="let p of   (productcategories[2] ? productcategories[2].slice(0,20) :[] ) " >
+    <div class="publicproductdiv">
+      <img src="{{p.selectedFile[0].imageurl }}" alt=""  class="mobile-img">
+      <div class="productcap">
+        <a routerLink="../itemdetails/{{p?.id}}" >   <div>{{p.productname}}</div></a>
+        <span class="price">{{p.saleprice}} جنية </span>
+       
+
+      </div>
+
+
+  </div>
+
+  
+</div>
+</ngx-slick-carousel>
+
+   
+  </div>
+  </ng-container>
+</div>
+<div class="row">
+  <ng-container class="col-md-12 col-xs-12"   >
+    <div  (OnCreate)="getProductcat('TOOLS')" class=" Electeical">
+    <div class="title">  ادوات     </div>
+    <ngx-slick-carousel class="carousel" 
+    #slickModal="slick-carousel" 
+    [config]="slideConfig" 
+    
+  >
+  
+  <div ngxSlickItem  class="slide publicproduct" *ngFor="let p of   (productcategories[3] ? productcategories[3].slice(0,20) :[] ) " >
+    <div class="publicproductdiv">
+      <img src="{{p.selectedFile[0].imageurl }}" alt="" class="mobile-img">
+      <div class="productcap">
+        <a routerLink="../itemdetails/{{p?.id}}" > <div>{{p.productname}}</div></a>
+        <span class="price">{{p.saleprice}} جنية </span>
+        <p class="card-text mount">الكمية المتوفرة :  {{p.mount}}</p>
+
+      </div>
+
+
+  </div>
+
+  
+</div>
+</ngx-slick-carousel>
+
+   
+  </div>
+  </ng-container>
+</div>
+</div>

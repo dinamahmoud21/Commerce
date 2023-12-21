@@ -1,0 +1,80 @@
+.navbar-brand{
+    float:right !important 
+}
+@media (min-width: 768px){
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-right: -15px;
+}
+.navbar-nav{
+    float:right
+}
+}
+.nav-bar{
+    background-color:#f0ad4e !important;
+    color:white;
+    height:50px
+}
+.navbar-nav>li>a{
+    color:white
+}
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav {
+    justify-content: center !important;
+    float:none !important
+
+}
+}
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav .nav-link {
+   
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    font-family: 'Cairo', sans-serif;
+font-family: 'Readex Pro', sans-serif;
+
+}
+}
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+.search-prod{
+    margin-top:.5%;
+   
+}
+.item-search{
+    width:60%
+}
+.login ,.register{
+    color:white !important;
+  
+    font-family: 'Readex Pro', sans-serif;
+   
+}

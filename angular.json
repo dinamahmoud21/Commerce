@@ -20,20 +20,33 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
+
               "src/assets"
             ],
             "styles": [
+           
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap-rtl/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/slick-carousel/slick/slick.scss",
+              "./node_modules/slick-carousel/slick/slick-theme.scss",
               "src/styles.css"
+
+
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "./node_modules/slick-carousel/slick/slick.min.js"
+            ]
+              
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "6mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -97,5 +110,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "bbd814d2-bcea-4391-92b5-6c9977cc6a20"
   }
 }

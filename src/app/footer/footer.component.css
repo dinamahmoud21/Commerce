@@ -1,0 +1,133 @@
+/*=================================================================
+  Footer section
+==================================================================*/
+
+#footer {
+   background-color: black;
+    flex: 0 0 50px;
+    margin-top: auto;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 2%;
+}
+
+.top-footer {
+    margin-top: 2%;
+    background-color: black;
+}
+
+.mt-footer {
+    margin-top: 2%;
+}
+
+.top-footer h3 {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 23px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.top-footer p {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 13px;
+    line-height: 30px;
+    color: #bdbdbd;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding-right: 20px;
+}
+
+.top-footer li {
+    list-style-type: none;
+}
+
+.top-footer li a {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 15px;
+    line-height: 50px;
+    color: #dddfeb;
+    font-weight: 300;
+    text-transform: capitalize;
+    transition: color .3s;
+    display: block;
+    text-decoration: none;
+}
+
+.top-footer li a:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    background-color: #1b1b1b;
+    border-top: 1px solid #2c2c2c;
+    padding: 30px 0;
+}
+
+.footer-bottom h5 {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    color: #888888;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 7px;
+    margin-bottom: 3px;
+}
+
+.footer-bottom h6 {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 11px;
+    line-height: 15px;
+    color: #888888;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.center-column {
+    margin-top: 4%
+}
+
+
+/*Icon Style */
+
+
+#footer .modal-dialog {
+    position: fixed;
+    top: auto;
+    left: 6%;
+    bottom: 1%;
+}
+
+#footer .modal-header {
+    border: none
+}
+
+#footer .modal-footer {
+    border: none
+}
+
+#footer .modal-title {
+    margin: auto !important
+}
+
+#footer .modal-title img {
+    width: 32px;
+    height: 32px;
+    margin-top: -3%
+}
+
+#footer .modal-title h5 {
+    font-family: 'Readex Pro', sans-serif;
+    color: rgb(0, 19, 59);
+    font-weight: bold;
+}

@@ -1,0 +1,37 @@
+<div class="container product">
+    <div class="form-group mt-3 col-md-12">
+        <label for="formGroupExampleInput"> اسم التصنيف</label>
+        <ng-select  [searchable]="true"
+            [required]="true"  
+              (ngModelChange)="getProductcat($event)" [ngModel]="selectedvalue"
+           >
+            <ng-option  *ngFor="let car of  FilterProduct  " [value]="car.productcat[0]">{{car.productcat[0]}}</ng-option>
+        </ng-select>
+      <div class="row">
+         <div class="p-4 col-md-3"   *ngFor="let prod of Product">
+          <div class="card p-2  ">
+              <div  *ngIf="prod.selectedFile[0]">
+              <img class="card-img-top" [src]="prod.selectedFile[0].imageurl" alt="Card image cap">
+             </div>
+              <div class="card-body">
+              <a><h5 class="card-title">{{prod.productname}}</h5></a>
+              </div>
+              <ul class="list-group list-group-flush">
+                 
+                <li class="list-group-item"> السعر :{{prod.saleprice}}</li>
+                <li class="list-group-item"> الكمية المتوفرة{{prod.mount}}
+                  
+              
+              </ul>
+              
+            </div>
+            </div>
+  
+            </div>
+  
+            </div>
+  
+     
+  
+  
+  

@@ -1,0 +1,14 @@
+.item-image{
+    height: 150px;
+    margin: auto;
+    width: auto;
+    display: table;
+    max-width: 200px;
+}
+.card-details{
+    display: table;
+    margin: auto;
+}
+.publicproductdiv{
+  border:none
+}

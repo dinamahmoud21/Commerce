@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-xs-12">
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+            <lib-ngx-image-zoom
+    [thumbImage]=galleryImages
+    [fullImage]=galleryImages
+></lib-ngx-image-zoom>
+        </div>
+        <div class="col-md-3 col-xs-12 item-cap">
+            <div class="mt-5 mb-5" >{{GetProduct.productname}}</div>
+            <div class="mb-5">السعر :{{GetProduct.saleprice}} جنية  </div>
+            <div>الكمية المتوفرة  : {{GetProduct.mount}}</div>
+            <button class="btn btn-warning  text-bold" style="width:100% ; margin-top: 30% ; font-weight:500;">اضافة الي عربة الشراء</button>
+                
+
+        </div>
+
+    </div>
+    <div class="row mt-5">
+        <ng-container class="col-md-12 col-xs-12"   >
+          <div  (OnCreate)="getProductcat(GetProduct.productcat[0])" class=" Electeical">
+          
+          <div class="title">    منجات ذات صلة ب {{GetProduct.productcat[1]}} </div>
+          <ngx-slick-carousel class="carousel" 
+          #slickModal="slick-carousel" 
+          [config]="slideConfig" 
+          
+        >
+        
+        <div ngxSlickItem  class="slide publicproduct" *ngFor="let p of   (productcategory? productcategory.slice(0,20) :[] ) " >
+          <div class="publicproductdiv" >
+            <img src="{{p.selectedFile[0].imageurl }}" alt="" width="100%" class="card-img" >
+            <div class="productcap">
+              <a routerLink="../../itemdetails/{{p?.id}}" (click)="refreh()">   <div>{{p.productname}}</div></a>
+              <span class="price">{{p.saleprice}} جنية </span>
+              <p class="card-text mount">الكمية المتوفرة :  {{p.mount}}</p>
+      
+            </div>
+      
+      
+        </div>
+      
+        
+      </div>
+      </ngx-slick-carousel>
+      
+         
+        </div>
+        </ng-container>
+      </div>
+</div>
